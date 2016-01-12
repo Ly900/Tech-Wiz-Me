@@ -1,0 +1,58 @@
+html, body, div, header, h1, h2 {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  box-sizing: border-box;
+}
+
+/*************************************
+MAIN CSS
+*************************************/
+html {
+  background-color: #E4E4E5;
+  font-size: 16px;
+}
+
+header {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  border: 1px solid green;
+}
+
+body {
+  background-color: white;
+  max-width: 80%;
+  margin: 0 auto;
+  height: 1000px;
+  box-shadow: 0px 7px 15px gray;
+  margin-bottom: 1rem;
+  /*border-left: 1px solid #A61300;*/
+  /*border-right: 1px solid #A61300;*/
+}
+
+div.container-fluid {
+  /*border: 1px solid blue;*/
+}
+
+div.row {
+  margin: 0 auto;
+  max-width: 90%;
+}
+
+/*************************************
+HEADINGS
+*************************************/
+
+h1 {
+  text-align: center;
+  max-width: 100%;
+  /*margin-top: 1rem;*/
+  font-size: 3rem;
+  /*border: 1px solid black;*/
+}
+
+h2 {
+  text-align: center;
+  max-width: 100%;
+  font-size: 2rem;
+}
