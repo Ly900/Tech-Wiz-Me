@@ -14,7 +14,7 @@ var myApp = angular
       //   }
       // }; //ends changeClass function
 
-      // This tells the front-end to get the data from the back-end with path "/problem"; once it comes back,
+      // This tells the front-end to get the data from the back-end with path "/problem"; once it comes back as a response, that's assigned to the problems variable.
       $http.get("/problems")
       .success(function(response) {
         console.log("I got the data I requested");
