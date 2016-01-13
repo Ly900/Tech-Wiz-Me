@@ -1,4 +1,4 @@
-html, body, div, header, h1, h2 {
+html, body, div, header, h1, h2, h3, h4 {
   margin: 0;
   padding: 0;
   border: 0;
@@ -16,6 +16,7 @@ html {
 header {
   margin-top: 1rem;
   margin-bottom: 1rem;
+  background-color: #A61300;
   border: 1px solid green;
 }
 
@@ -43,16 +44,33 @@ div.row {
 HEADINGS
 *************************************/
 
+/* Used for main title. */
 h1 {
   text-align: center;
   max-width: 100%;
-  /*margin-top: 1rem;*/
+  color: white;
   font-size: 3rem;
+  text-shadow: 2px 2px 2px black;
   /*border: 1px solid black;*/
 }
 
+/* Used for "Question of the Day" and "Share a Question" */
 h2 {
   text-align: center;
   max-width: 100%;
   font-size: 2rem;
+}
+
+/* Used for card question */
+h3 {
+  text-align: center;
+  max-width: 100%;
+  font-size: 1.5rem;
+}
+
+/* Used for intro paragraph to site and text for submit a question- reg. site text size? */
+h4 {
+  text-align: center;
+  max-width: 100%;
+  font-size: 1rem;
 }
