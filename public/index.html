@@ -33,7 +33,7 @@
         <h2>
           Question of the Day
         </h2>
-        <div class={{cardClass}} data-ng-click="changeClass()">
+        <div class="question-of-day {{cardClass}}">
           <h3>
             Why did you choose the career for which you are preparing?
           </h3>
@@ -55,6 +55,14 @@
           Was the Question of the Day a walk in the park for you? Try the ones below!
         </p>
     </div>
+
+
+    <div class="row cards">
+      <div class="{{cardClass}}" data-ng-repeat="problem in problems">
+        <p>{{problem.question}}</p>
+      </div>
+    </div>
+
 
   <!-- Ends container-fluid class for entire body -->
   </div>
