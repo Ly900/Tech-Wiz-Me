@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en"  data-ng-app>
+<html lang="en"  data-ng-app = "techWizMe">
 <head>
   <meta charset="UTF-8">
   <title>Tech Wiz Me App</title>
@@ -16,7 +16,7 @@
     <h1>TechWiz Me!</h1>
   </header>
 
-  <div class="container-fluid">
+  <div class="container-fluid" data-ng-controller="AppCtrl">
 
     <div class="row">
       <h4>
@@ -33,7 +33,7 @@
         <h2>
           Question of the Day
         </h2>
-        <div class="question-card">
+        <div class={{cardClass}} data-ng-click="changeClass()">
           <h3>
             Why did you choose the career for which you are preparing?
           </h3>
@@ -56,11 +56,10 @@
         </p>
     </div>
 
-
-
   <!-- Ends container-fluid class for entire body -->
   </div>
   <!-- Angular CDN -->
   <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.5/angular.min.js"></script>
+  <script type="text/javascript" src="controllers/controller.js"></script>
 </body>
 </html>
