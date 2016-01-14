@@ -49,7 +49,7 @@
         </p>
     </div>
 
-    <div class="row" data-ng-hide="!showForm">
+    <div class="row" id="form" data-ng-show="showForm">
         <form class="form">
 
           <label for="question">Question:</label>
@@ -58,7 +58,9 @@
           <label for="resource_links">Resource Link:</label>
           <input type="text" id="resource_links" class="form-control" data-ng-model="problem.resource_links"/>
 
-          <button class="btn btn-primary" data-ng-click="addProblem()">Share Question</button>
+          <button class="btn btn-primary" id="share" data-ng-click="addProblem()">
+            Share Question
+          </button>
 
         </form>
     </div>

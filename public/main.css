@@ -1,6 +1,6 @@
 @import url(https://fonts.googleapis.com/css?family=Raleway:400,600,800);
 
-html, body, div, header, h1, h2, h3, h4, p {
+html, body, div, header, h1, h2, h3, h4, p, a {
   margin: 0;
   padding: 0;
   border: 0;
@@ -37,6 +37,12 @@ body {
   /*border-right: 1px solid #A61300;*/
 }
 
+input {
+  margin: 0 auto;
+  padding: 0px;
+  width: 100%;
+}
+
 /*************************************
 CONTAINERS
 *************************************/
@@ -59,6 +65,23 @@ div.row, .cards {
   flex-wrap: wrap;
   align-items: center;
   align-content: center;
+}
+
+div#form {
+  max-width: 75%;
+  margin: 0 auto;
+  /*border: 1px solid red;*/
+}
+
+/*************************************
+LINKS & BUTTONS
+*************************************/
+a {
+  cursor: pointer;
+}
+
+button#share {
+  margin-top: 1rem;
 }
 
 /*************************************
@@ -140,6 +163,7 @@ img.menu-icon {
  /*margin:0 auto;*/
  margin-top: auto;
  padding-bottom: 2px;
+ cursor: pointer;
 }
 
 div.menu-icon-buttons {
