@@ -44,11 +44,12 @@
 
     <div class="row">
         <p class="text-center">
-          Were you asked a question during a tech interview that <em>stumped</em> you and you want to share it? <a href="#">Share your question!</a>
+          Were you asked a question during a tech interview that <em>stumped</em> you and you want to share it?
+          <a data-ng-click="showForm = !showForm">Share your question!</a>
         </p>
     </div>
 
-    <div class="row">
+    <div class="row" data-ng-hide="!showForm">
         <form class="form">
 
           <label for="question">Question:</label>
