@@ -22,6 +22,14 @@ var myApp = angular
         $scope.problems = response;
       }); // ends .success method
 
+      $scope.addProblem = function() {
+        console.log($scope.problem);
+        $http.post("/problems", $scope.problem)
+        .success(function(response){
+          // this ensures that the controller has received the data (the log will have an ID);
+          console.log(response);
+        }); //ends success method
+      }; // ends addProblem function
 
 
 

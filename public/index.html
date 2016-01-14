@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en"  data-ng-app = "techWizMe">
+<html lang="en"  data-ng-app="techWizMe">
 <head>
   <meta charset="UTF-8">
   <title>Tech Wiz Me App</title>
@@ -48,12 +48,26 @@
         </p>
     </div>
 
+    <div class="row">
+        <form class="form">
+
+          <label for="question">Question:</label>
+          <input type="text" id="question" class="form-control" data-ng-model="problem.question"/>
+
+          <label for="resource_links">Resource Link:</label>
+          <input type="text" id="resource_links" class="form-control" data-ng-model="problem.resource_links"/>
+
+          <button class="btn btn-primary" data-ng-click="addProblem()">Share Question</button>
+
+        </form>
+    </div>
+
     <hr>
 
     <div class="row">
         <p class="text-center">
           Was the Question of the Day a walk in the park for you? Try the ones below!
-        </p> 
+        </p>
     </div>
 
 
@@ -68,6 +82,6 @@
   </div>
   <!-- Angular CDN -->
   <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.5/angular.min.js"></script>
-  <script type="text/javascript" src="controllers/controller.js"></script>
+  <script type="text/javascript" src="questions/index.controller.js"></script>
 </body>
 </html>
