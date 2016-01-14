@@ -42,7 +42,9 @@ var myApp = angular
         });
       };
 
-
+      $scope.editProblem = function(id) {
+        console.log(id);
+      };
 
 
 

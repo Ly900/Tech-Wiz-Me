@@ -23,7 +23,7 @@
         "I have this tech interview coming up soon. Can you 'tech-wiz' me?"
       </h4>
       <p class="text-center">
-        If you're getting ready for an interview and looking for questions to practice with, you're at the right place!
+        If you're getting ready for an interview (or just looking to improve your knowledge and skills) and looking for questions to practice with, you're at the right place!
       </p>
     </div>
 
@@ -42,7 +42,7 @@
 
     <hr>
 
-    <div class="row">
+    <div class="row" id="share-q-box">
         <p class="text-center">
           Were you asked a question during a tech interview that <em>stumped</em> you and you want to share it?
           <a data-ng-click="showForm = !showForm">Share your question!</a>
@@ -60,6 +60,10 @@
 
           <button class="btn btn-primary" id="share" data-ng-click="addProblem()">
             Share Question
+          </button>
+
+          <button class="btn btn-primary" id="share" data-ng-click="addProblem()">
+            Update Question
           </button>
 
         </form>
@@ -85,7 +89,7 @@
           <img data-ng-src="images/menu-icon.png" data-ng-click="show = !show" class="menu-icon"/>
 
           <div data-ng-show="show" class="btn-group btn-group-xs" role="group" aria-label="buttons">
-            <button class="btn btn-warning">
+            <button class="btn btn-warning" data-ng-click="editProblem(problem._id)">
               Edit
             </button>
             <button class="btn btn-danger" data-ng-click="removeProblem(problem._id)">
