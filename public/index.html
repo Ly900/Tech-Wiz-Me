@@ -77,16 +77,20 @@
 
         <p>{{problem.question}}</p>
 
-        <img data-ng-src="images/menu-icon.png" data-ng-click="show = !show" data-ng-hide="show" class="menu-icon"/>
+        <div class="row menu-icon-buttons">
 
-        <div data-ng-show="show" class="btn-group btn-group-xs" role="group" aria-label="buttons">
-          <button class="btn btn-warning">
-            Edit
-          </button>
-          <button class="btn btn-danger" data-ng-click="removeProblem()">
-            Remove
-          </button>
-        </div>
+          <img data-ng-src="images/menu-icon.png" data-ng-click="show = !show" class="menu-icon"/>
+
+          <div data-ng-show="show" class="btn-group btn-group-xs" role="group" aria-label="buttons">
+            <button class="btn btn-warning">
+              Edit
+            </button>
+            <button class="btn btn-danger" data-ng-click="removeProblem()">
+              Remove
+            </button>
+          </div>
+
+        </div> <!-- ends div menu-icon-buttons -->
 
       </div> <!-- ends div question-card-front -->
 

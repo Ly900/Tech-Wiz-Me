@@ -125,7 +125,7 @@ div.question-card-front {
   color: white;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  /*justify-content: space-between;*/
   /*border: 1px solid blue;*/
 }
 
@@ -136,5 +136,12 @@ div.question-card-front {
 
 img.menu-icon {
  width:15px;
- margin:0 auto;
+ height: 15px;
+ /*margin:0 auto;*/
+ margin-top: auto;
+ padding-bottom: 2px;
+}
+
+div.menu-icon-buttons {
+  margin-top: auto;
 }
