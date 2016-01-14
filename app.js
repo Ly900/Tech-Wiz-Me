@@ -39,6 +39,16 @@ app.post("/problems", function(req, res) {
   }); // ends insert callback function
 }); // ends app.post
 
+app.delete("/problems/:id", function(req, res) {
+  console.log("Server received a delete request");
+  console.log(req.params.id)
+  var id = req.params.id;
+  db.techwizme.remove({"_id": mongojs.ObjectId(id)}, function(err, doc) {
+    res.json(doc);
+    console.log("Server sent data back to controller");
+  });
+});
+
 app.listen(3000, function(){
 console.log("Server running on port 3000");
 });

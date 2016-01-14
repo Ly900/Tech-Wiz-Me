@@ -35,7 +35,12 @@ var myApp = angular
         }); //ends success method
       }; // ends addProblem function
 
-
+      $scope.removeProblem = function(id) {
+        console.log(id);
+        $http.delete("/problems/" + id).success(function(response) {
+          refresh();
+        });
+      };
 
 
 
