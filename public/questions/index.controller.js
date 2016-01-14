@@ -13,14 +13,17 @@ var myApp = angular
       //     $scope.cardClass = "question-card-front";
       //   }
       // }; //ends changeClass function
-
-      // This tells the front-end to get the data from the back-end with path "/problem"; once it comes back as a response, that's assigned to the problems variable.
-      $http.get("/problems")
-      .success(function(response) {
-        console.log("I got the data I requested");
-        console.log(response);
-        $scope.problems = response;
-      }); // ends .success method
+      var refresh = function() {
+        // This tells the front-end to get the data from the back-end with path "/problem"; once it comes back as a response, that's assigned to the problems variable.
+        $http.get("/problems")
+        .success(function(response) {
+          console.log("I got the data I requested");
+          console.log(response);
+          $scope.problems = response;
+          $scope.problem = "";
+        }); // ends .success method
+      } // ends refresh function
+      refresh ();
 
       $scope.addProblem = function() {
         console.log($scope.problem);
@@ -28,6 +31,7 @@ var myApp = angular
         .success(function(response){
           // this ensures that the controller has received the data (the log will have an ID);
           console.log(response);
+          refresh();
         }); //ends success method
       }; // ends addProblem function
 
