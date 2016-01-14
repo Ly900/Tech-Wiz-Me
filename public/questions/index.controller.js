@@ -42,9 +42,18 @@ var myApp = angular
         });
       };
 
-      $scope.editProblem = function(id) {
-        console.log(id);
+      $scope.editProblem = function(problem) {
+        $scope.problem = problem;
       };
+
+      $scope.updateProblem = function() {
+        console.log($scope.problem._id);
+        $http.put("/problems/" + $scope.problem._id, $scope.problem)
+          .success(function(response) {
+          refresh();
+        });
+      };
+
 
 
 

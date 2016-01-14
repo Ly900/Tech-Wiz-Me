@@ -44,12 +44,11 @@
 
     <div class="row" id="share-q-box">
         <p class="text-center">
-          Were you asked a question during a tech interview that <em>stumped</em> you and you want to share it?
-          <a data-ng-click="showForm = !showForm">Share your question!</a>
+          Were you asked a question during a tech interview that <em>stumped</em> you and you want to share it? Share your question below!</a>
         </p>
     </div>
 
-    <div class="row" id="form" data-ng-show="showForm">
+    <div class="row" id="form">
         <form class="form">
 
           <label for="question">Question:</label>
@@ -62,7 +61,7 @@
             Share Question
           </button>
 
-          <button class="btn btn-primary" id="share" data-ng-click="addProblem()">
+          <button class="btn btn-primary" id="share" data-ng-click="updateProblem()">
             Update Question
           </button>
 
@@ -82,14 +81,14 @@
 
       <div class="question-card-front" data-ng-repeat="problem in problems">
 
-        <p>{{problem.question}}</p>
+        <p>{{problem.question}}</p> 
 
         <div class="row menu-icon-buttons">
 
           <img data-ng-src="images/menu-icon.png" data-ng-click="show = !show" class="menu-icon"/>
 
           <div data-ng-show="show" class="btn-group btn-group-xs" role="group" aria-label="buttons">
-            <button class="btn btn-warning" data-ng-click="editProblem(problem._id)">
+            <button class="btn btn-warning" data-ng-click="editProblem(problem)">
               Edit
             </button>
             <button class="btn btn-danger" data-ng-click="removeProblem(problem._id)">

@@ -49,6 +49,17 @@ app.delete("/problems/:id", function(req, res) {
   });
 });
 
+app.put ("/problems/:id", function(req, res) {
+  console.log("Server received a put request");
+  var id = req.params.id;
+  db.techwizme.findAndModify({query:
+    {_id: mongojs.ObjectId(id)},
+    update: {$set: {question: req.body.question, resource_links: req.body.resource_links}},
+    new: true}, function(err, doc) {
+      res.json(doc);
+  }); // ends query and findAndModify??
+});
+
 app.listen(3000, function(){
 console.log("Server running on port 3000");
 });
