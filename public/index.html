@@ -33,7 +33,7 @@
         <h2>
           Question of the Day
         </h2>
-        <div class="question-of-day {{cardClass}}">
+        <div class="question-card-front" id="question-of-day">
           <h3>
             Why did you choose the career for which you are preparing?
           </h3>
@@ -72,10 +72,25 @@
 
 
     <div class="row cards">
+
       <div class="question-card-front" data-ng-repeat="problem in problems">
+
         <p>{{problem.question}}</p>
-      </div>
-    </div>
+
+        <img data-ng-src="images/menu-icon.png" data-ng-click="show = !show" data-ng-hide="show" class="menu-icon"/>
+
+        <div data-ng-show="show" class="btn-group btn-group-xs" role="group" aria-label="buttons">
+          <button class="btn btn-warning">
+            Edit
+          </button>
+          <button class="btn btn-danger" data-ng-click="removeProblem()">
+            Remove
+          </button>
+        </div>
+
+      </div> <!-- ends div question-card-front -->
+
+    </div> <!-- ends div row cards -->
 
 
   <!-- Ends container-fluid class for entire body -->
