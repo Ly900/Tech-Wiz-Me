@@ -1,5 +1,5 @@
 {
-  "name": "techwizmeapp",
+  "name": "techwizme",
   "version": "1.0.0",
   "description": "An app to help you practice tech interview questions.",
   "main": "app.js",
@@ -11,6 +11,9 @@
   "dependencies": {
     "body-parser": "^1.14.2",
     "express": "^4.13.3",
-    "mongojs": "^2.2.2"
+    "foreman": "1.4.1",
+    "kerberos": "0.0.17",
+    "mongojs": "^2.2.2",
+    "node": "0.0.0"
   }
 }
