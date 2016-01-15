@@ -9,7 +9,7 @@ var bodyParser = require("body-parser");
 
 // Usage: var db = mongojs(connectionString, [collections])
 // Usage example: var db = mongojs('mydb', ['mycollection'])
-var db = mongojs("techwizme", ["techwizme"])
+// var db = mongojs("techwizme", ["techwizme"])
 
 var db = mongojs('mongodb://<dbuser>:<dbpassword>@ds045475.mongolab.com:45475/heroku_lsqbnf85', ['problems']);
 
