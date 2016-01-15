@@ -10,7 +10,7 @@ var bodyParser = require("body-parser");
 // Usage: var db = mongojs(connectionString, [collections])
 // Usage example: var db = mongojs('mydb', ['mycollection'])
 var db = mongojs("techwizme", ["techwizme"])
-
+mongoose.connect(process.env.MONGOLAB_URI || 'mongodb://localhost/techwizme');
 // Allows us to use static files in the public directory like CSS/JS
 // Automatically goes to the public folder and uses the index.html there.
 app.use(express.static(__dirname + "/public"));
@@ -60,6 +60,8 @@ app.put ("/problems/:id", function(req, res) {
   }); // ends query and findAndModify??
 });
 
+var port = process.env.PORT || 3000;
+
 app.listen(3000, function(){
-console.log("Server running on port 3000");
+console.log("Server running on " + port);
 });
