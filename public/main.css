@@ -152,6 +152,11 @@ div.question-card-front, div.question-card-back {
   /*border: 1px solid blue;*/
 }
 
+div.question-card-front:hover {
+  background-color: #83C1D6;
+  cursor: pointer;
+}
+
 .question-card-back {
   background-color: #FFD972;
 }

@@ -61,5 +61,9 @@ db.techwizme.insert([
     question: "What is function hoisting?",
     resource_links:
       "https://www.codementor.io/javascript/tutorial/21-essential-javascript-tech-interview-practice-questions-answers"
+  },
+  problem14 = {
+    question: "What is Design Studio and how do you critique in Design Studio?",
+    resource_links: "https://www.targetprocess.com/blog/2011/05/ux-meets-agile-design-studio-methodology/"
   }
 ])
