@@ -10,7 +10,7 @@ var bodyParser = require("body-parser");
 // Usage: var db = mongojs(connectionString, [collections])
 // Usage example: var db = mongojs('mydb', ['mycollection'])
 var db = mongojs("techwizme", ["techwizme"])
-db.connect(process.env.MONGOLAB_URI || 'mongodb://<dbuser>:<dbpassword>@ds045475.mongolab.com:45475/heroku_lsqbnf85');
+
 // Allows us to use static files in the public directory like CSS/JS
 // Automatically goes to the public folder and uses the index.html there.
 app.use(express.static(__dirname + "/public"));
