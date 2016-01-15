@@ -11,7 +11,7 @@ var bodyParser = require("body-parser");
 // Usage example: var db = mongojs('mydb', ['mycollection'])
 // var db = mongojs("techwizme", ["techwizme"])
 
-var db = mongojs('ly900:f00@ds045785.mongolab.com:45785/techwizme', ['techwizme'])
+var db = mongojs('ly900:foo@ds045785.mongolab.com:45785/techwizme', ['techwizme'])
 
 // var db = mongojs("mongodb://" + (process.env.MONGODB_URL || "localhost/techwizme"), ['techwizme']);
 
