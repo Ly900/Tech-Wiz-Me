@@ -136,7 +136,7 @@ div#question-of-day {
   margin: 0 auto;
 }
 
-div.question-card-front {
+div.question-card-front, div.question-card-back {
   margin: .5rem 1rem;
   width: 200px;
   height: 200px;
@@ -150,6 +150,15 @@ div.question-card-front {
   flex-direction: column;
   /*justify-content: space-between;*/
   /*border: 1px solid blue;*/
+}
+
+.question-card-back {
+  background-color: #FFD972;
+}
+
+div.question-card-front a {
+  color: white;
+  text-shadow: none;
 }
 
 .btn-group {

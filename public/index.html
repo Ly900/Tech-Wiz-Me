@@ -8,6 +8,9 @@
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" media="screen" title="no title" charset="utf-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
+  <!-- Featherlight Styles CDN -->
+  <link href="//cdn.rawgit.com/noelboss/featherlight/1.3.5/release/featherlight.min.css" type="text/css" rel="stylesheet" />
+
   <!-- My CSS -->
   <link rel="stylesheet" href="main.css" media="screen" title="no title" charset="utf-8"/>
 </head>
@@ -76,12 +79,17 @@
         </p>
     </div>
 
+    <!-- BEGINNING OF ALL CARDS -->
 
     <div class="row cards">
 
-      <div class="question-card-front" data-ng-repeat="problem in problems">
+      <div class="question-card-front" data-ng-repeat="problem in problems" data-ng-class="newClass" data-ng-click="question = !question"; "newClass='question-card-back'">
 
-        <p>{{problem.question}}</p> 
+        <p data-ng-init="question = true" data-ng-hide="!question">{{problem.question}}</p>
+        <p class="text-center" data-ng-hide="question">
+          <a href="{{problem.resource_links}}">Resource link
+          </a>
+        </p>
 
         <div class="row menu-icon-buttons">
 
@@ -97,16 +105,20 @@
           </div>
 
         </div> <!-- ends div menu-icon-buttons -->
-
       </div> <!-- ends div question-card-front -->
-
     </div> <!-- ends div row cards -->
 
+    <!-- END OF ALL CARDS -->
 
   <!-- Ends container-fluid class for entire body -->
   </div>
+
   <!-- Angular CDN -->
   <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.5/angular.min.js"></script>
   <script type="text/javascript" src="questions/index.controller.js"></script>
+
+  <!-- Featherlight and JQuery -->
+  <script src="//code.jquery.com/jquery-latest.js"></script>
+  <script src="//cdn.rawgit.com/noelboss/featherlight/1.3.5/release/featherlight.min.js" type="text/javascript" charset="utf-8"></script>
 </body>
 </html>
