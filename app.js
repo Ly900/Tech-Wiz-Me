@@ -7,9 +7,17 @@ var app = express();
 var mongojs = require("mongojs");
 var bodyParser = require("body-parser");
 
-// Usage: var db = mongojs(connectionString, [collections])
+// Local Usage: var db = mongojs(connectionString, [collections])
 // Usage example: var db = mongojs('mydb', ['mycollection'])
-var db = mongojs("techwizme", ["techwizme"])
+// var db = mongojs("techwizme", ["techwizme"])
+
+// var db = mongojs("mongodb://Ly900:foo@ds045785.mongolab.com:45785/techwizme", ['techwizme']);
+
+mongojs.connect("mongodb://" + (process.env.MONGODB_URL || "localhost/techwizme"));
+
+// Put below into command line to match with what's up there ^
+// heroku config:add MONGODB_URL=ly900:foo@@ds045785.mongolab.com:45785/techwizme
+
 
 // Allows us to use static files in the public directory like CSS/JS
 // Automatically goes to the public folder and uses the index.html there.
@@ -60,6 +68,6 @@ app.put ("/problems/:id", function(req, res) {
   }); // ends query and findAndModify??
 });
 
-app.listen(3000, function(){
+app.listen(process.env.PORT || 3000, function(){
 console.log("Server running on port 3000");
 });
