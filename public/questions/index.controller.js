@@ -4,6 +4,7 @@ var myApp = angular
     '$scope',
     '$http',
     function($scope, $http) {
+      $scope.showUpdateButton = false;
       console.log("Response from Angular controller");
       var refresh = function() {
         // This tells the front-end to get the data from the back-end with path "/problem"; once it comes back as a response, that's assigned to the problems variable.
@@ -36,12 +37,18 @@ var myApp = angular
 
       $scope.editProblem = function(problem) {
         $scope.problem = problem;
+        if ($scope.showUpdateButton == false) {
+          $scope.showUpdateButton = true;
+        } else {
+          $scope.showUpdateButton = false;
+        }
       };
 
       $scope.updateProblem = function() {
         console.log($scope.problem._id);
         $http.put("/problems/" + $scope.problem._id, $scope.problem)
           .success(function(response) {
+          $scope.showUpdateButton = false;
           refresh();
         });
       };

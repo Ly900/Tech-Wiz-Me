@@ -60,11 +60,11 @@
           <label for="resource_links">Resource Link:</label>
           <input type="text" id="resource_links" class="form-control" data-ng-model="problem.resource_links"/>
 
-          <button class="btn btn-primary" id="share" data-ng-click="addProblem()">
+          <button class="btn btn-primary" id="share" data-ng-click="addProblem()" data-ng-show="!showUpdateButton">
             Share Question
           </button>
 
-          <button class="btn btn-primary" id="share" data-ng-click="updateProblem()">
+          <button class="btn btn-primary" id="share" data-ng-click="updateProblem()" data-ng-show="showUpdateButton">
             Update Question
           </button>
 
@@ -87,7 +87,7 @@
 
         <p data-ng-init="question = true" data-ng-hide="!question">{{problem.question}}</p>
         <p class="text-center" data-ng-hide="question">
-          <a href="{{problem.resource_links}}">Resource link
+          <a href="{{problem.resource_links}}" target="_blank">Resource link
           </a>
         </p>
 
